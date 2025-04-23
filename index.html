@@ -211,7 +211,7 @@ padding-bottom: 20px;
   </style>
   <style>
     .footer {
-      background-color: #2b2521; /* Dark background */
+      background-color: #2b2521;
       color: white;
       padding: 30px;
       font-family: sans-serif;
@@ -224,12 +224,12 @@ padding-bottom: 20px;
   
     .footer h3::after {
       content: '';
-    display: block;
-    width: 30px !important;
-    height: 3px !important;
-    background-color: #d82929;
-    margin-top: 5px !important;
-    margin: 0 auto;
+      display: block;
+      width: 30px !important;
+      height: 3px !important;
+      background-color: #d82929;
+      margin-top: 5px !important;
+      margin: 0 auto !important;
     }
   
     .footer p {
@@ -265,7 +265,39 @@ padding-bottom: 20px;
       height: 20px;
       background-color: #d82929;
     }
-  </style
+  
+    .ff {
+      position: fixed;
+      width: 100vw;
+      left: 0;
+      bottom: 0;
+    }
+  
+    .footer-flex {
+      display: block;
+    }
+  
+    @media (min-width: 768px) {
+      .footer{
+        padding: 0;
+      }
+      .footer-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+  
+      .footer-hours,
+      .social-icons-foot {
+        width: 48%;
+      }
+  
+      .social-icons-foot {
+        margin-top: 0;
+      }
+    }
+  </style>
+  
 </head>
 <body>
   <!-- Popup -->
@@ -327,23 +359,30 @@ padding-bottom: 20px;
     <button class="menu-button">See Full Menu</button>
 
     <!-- Footer Markup -->
-<div class="footer">
-  <h3>Opening Hours</h3>
-  <p>Everyday 8am – 12am</p>
-  <p>Hotline <span class="hotline">09613505085</span></p>
+    <div class="ff">
+  <div class="footer">
+    <div class="footer-flex">
+      <div class="footer-hours">
+        <h3>Opening Hours</h3>
+        <p>Everyday 8am – 12am</p>
+        <p>Hotline <span class="hotline">09613505085</span></p>
+      </div>
 
-  <div class="social-icons-foot">
-    <h3>Follow Us</h3>
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-youtube"></i></a>
-    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-    <a href="#"><i class="fas fa-envelope"></i></a>
+      <div class="social-icons-foot">
+        <h3>Follow Us</h3>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
   </div>
   <div class="footer-bottom"></div>
 </div>
 
   </div>
+
 
   <script>
     function closePopup() {
